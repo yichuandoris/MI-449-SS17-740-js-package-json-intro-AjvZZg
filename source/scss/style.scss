@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background-color: $background-color;
+  color: $color4;
+}
+
+table.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0, $border-base-radius, $border-base-radius, 0;
+  border-bottom-right-radius: $border-base-radius;
+  background-color: $color1;
+  box-shadow: $color3 0 0 15px;
+  font-family: $serif-fonts;
+}
+
+table.menu h1 {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+table.menu td {
+  text-align: center;
+}
+
+table.menu button {
+  width: 80%;
+  background-color: $color-table-background;
+  color: $color5;
+  text-align: center;
+  font-family: $serif-fonts;
+  font-weight: normal;
+  font-size: 12px;
+  border: $border-base;
+  transition: width 0.5s, background-color 0.5s;
+  border-radius: $border-base-radius * 0.5;
+}
+
+table.menu button:hover {
+  cursor: pointer;
+  background-color: $color-hover-background;
+  width: 85%;
+  transition: width 0.5s, background-color 0.5s;
+}
+
+table.menu button:active,
+table.menu button:focus {
+  outline: none;
+}
+
+table.menu td.label {
+  width: 80px;
+}
+
+table.menu td.label,
+table.menu td.result {
+  text-align: right;
+}
+
+.clicky {
+  position: absolute;
+  border-radius: 50%;
+  background-color: $color-click-background;
+  border: $border-base;
+  box-shadow: $color3 0 0 15px;
+}
+
+.clicky:hover {
+  cursor: pointer;
+}

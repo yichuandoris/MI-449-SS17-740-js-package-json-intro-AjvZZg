@@ -1,0 +1,29 @@
+{
+  "name": "doris-json-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:server": "live-server",
+    "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
+    "dev": "run-p dev:*",
+    "lint:js": "standard",
+    "lint:html": "htmlhint",
+    "lint:css": "stylelint",
+    "lint": "run-s lint:*",
+    "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "deploy:surge": "surge --project . --domain MI-449-SS17-740-js-package-json-intro-AjvZZg.surge.sh",
+    "deploy": "run-s lint:* build:* deploy:surge"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "devDependencies": {
+    "htmlhint": "^0.9.13",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "standard": "^10.0.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "surge": "^0.19.0"
+  }
+}
